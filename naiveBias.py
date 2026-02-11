@@ -231,11 +231,11 @@ def main():
     #5
     top_pos, top_neg = most_useful_features(final_model, top_k=7)
 
-    print("\n=== Top Positive Words ===")
+    print("\n\nTop Positive Words ")
     for w, s in top_pos:
         print(f"{w}\t{s:.3f}")
 
-    print("\n=== Top Negative Words ===")
+    print("\n\nTop Negative Words ")
     for w, s in top_neg:
         print(f"{w}\t{s:.3f}")
 
