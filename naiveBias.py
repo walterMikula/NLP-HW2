@@ -195,7 +195,7 @@ def main():
     alpha, max_vocab, min_count, dev_metrics = best_cfg
     print("\n=== Best Dev Config ===")
     print(f"alpha={alpha}, max_vocab={max_vocab}, min_count={min_count}")
-    print(f"Dev metrics: {dev_metrics}")
+    print(f"Development metrics: {dev_metrics}")
 
     # 3
     train_plus = train + dev
@@ -219,13 +219,13 @@ def main():
     for item in most_conf:
         
         conf, logodds_abs, y, yhat, text = item
-        print(f"conf={conf:.3f} | |logodds|={logodds_abs:.2f} | gold={fmt_label(y)} | pred={fmt_label(yhat)}")
+        print(f"conf={conf:.3f} | logodds={logodds_abs:.2f} | true_label={fmt_label(y)} | predicted={fmt_label(yhat)}")
         print(f"  {text}\n")
 
     print("\n=== Most Uncertain Predictions ===")
     for item in most_unc:
         conf, logodds_abs, y, yhat, text = item
-        print(f"conf={conf:.3f} | |logodds|={logodds_abs:.2f} | gold={fmt_label(y)} | pred={fmt_label(yhat)}")
+        print(f"conf={conf:.3f} | logodds={logodds_abs:.2f} | true_label={fmt_label(y)} | predicted={fmt_label(yhat)}")
         print(f"  {text}\n")
 
     #5
